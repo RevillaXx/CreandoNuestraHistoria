@@ -1,0 +1,115 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/waltograph" rel="stylesheet">
+
+    <link rel="stylesheet" href="stiloshistoria.css" media="screen"> 
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0H0W4L724"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G0H0W4L724');
+</script>
+    <title>Creando Nuestra Bonita Historia De Amor</title>
+       
+</head>
+
+<body>
+    <div class="title-container">
+        <h1 class="title">Bienvenida a Nuestro Mundo Mágico</h1>
+    </div>
+    
+    
+    <div class="background-image">
+        <div class="text-box left">
+        <b>
+            <br>Primro eran videos, luego páginas y estados.</br>
+            <br>Después cartas, ahora versos guardados.</br>
+            <br>Pero nunca dejaré de mostrarte mi amor.</br>
+            <br>Ni de recordarte cuanto vales con todo mi corazón.</br><br></br>
+            <br> Te necesito mi amor cada instante.</br>
+<br> Eres la luz de mi vida brillante y constante.</br>
+<br> Nada me parece imposible a tu lado.</br>
+<br> Dejame acompañarte en este camino que hemos creado.</br><br></br>
+<br> Juntos haremos que el tiempo esté de nuestro lado.</br>
+<br> Porque te necesito y en ti he encontrado.</br>
+<br> El hogar, el refugio que había deseado</br>
+<br> El futuro que juntos hemos soñado.</br> 
+<br></br>
+<br>Tu belleza deslumbra como un ángel divino</br>
+            <br>Pero es tu inteligencia la que marca tu camino</br>
+            <br>tan sabia y sobresaliente para todos los demás</br>
+            <br>Tu educación y respeto es un ejemplo donde vas</br>
+        </b>
+            </div>
+        
+        <div class="image-area"></div>
+        <div class="text-box right"><b>
+            <br>Educada y atenta, siempre a la altura</br>
+            <br>Tu sonrisa mis problemas cura</br>
+            <br>Eres el sueño que siempre deseé</br>
+            <br>Por ti, cada día más fuerte seré</br>
+            <br></br>
+            <br>Siempre tan fiel, tan adorable…</br>
+            <br>En ti encontré un amor inagotable</br>
+            <br>Eres tan brillante y especial</br>
+            <br>Nuestro amor es el fuego inmortal</br>
+            <br></br>
+            <br>Preciosa como un día al amanecer</br>
+            <br>Tu luz en mi oscuridad me hace crecer</br>
+            <br>Amable, cariñosa y sincera en todo momento</br>
+            <br>Tu risa es la causa de que mi corazón esté contento</br>
+            <br></br>
+            <br>Eres mi musa, mi todo, mi ser</br>
+            <br>Contigo a mi lado, sé que puedo vencer</br>
+            <h1>Te amo con toda mi alma y todo mi corazón</h1></b>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const imageArea = document.querySelector('.image-area');
+            const starCount = 5; // Número de estrellas a generar
+            const starSize = 50; // Tamaño de las estrellas en píxeles
+    
+            // Obtener el tamaño del área visible de la imagen
+            const containerWidth = imageArea.clientWidth;
+            const containerHeight = imageArea.clientHeight;
+    
+            // Links de ejemplo para cada estrella
+            const starLinks = [
+                'https://link1.com',
+                'https://link2.com',
+                'https://link3.com',
+                'https://link4.com',
+                'https://link5.com'
+            ];
+    
+            for (let i = 0; i < starCount; i++) {
+                // Crear un nuevo elemento de estrella como enlace
+                const star = document.createElement('a');
+                star.classList.add('star');
+                star.href = starLinks[i % starLinks.length]; // Asigna cada enlace a una estrella
+                star.target = "_blank"; // Abre el enlace en una nueva pestaña
+    
+                // Generar posiciones aleatorias dentro de los límites seguros del área visible
+                const randomX = Math.random() * (containerWidth - starSize);
+                const randomY = Math.random() * (containerHeight - starSize);
+    
+                // Aplicar las posiciones calculadas
+                star.style.left = `${randomX}px`;
+                star.style.top = `${randomY}px`;
+    
+                // Agregar la estrella al contenedor de fondo
+                imageArea.appendChild(star);
+            }
+        });
+    </script>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+/* Fondo con gradiente en el body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, rgb(253, 90, 212), darkblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Waltograph';
+    src: url('fonts/Waltograph.woff2') format('woff2'),
+         url('fonts/Waltograph.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Contenedor con bordes gradientes */
+.background-image {
+    position: relative;
+    width: 90%; /* Ajustable */
+    max-width: 120vw;
+    height: 80%; /* Ajustable */
+    background-color: transparent;
+    border: 10px solid;
+    border-image: linear-gradient(to bottom right, #0d85d4, purple) 1;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; /* Alineación de contenido dentro del contenedor */
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Cuadros de texto a los lados de la imagen */
+
+.text-box {
+    width: 25%;
+    height: 100%;
+    padding: 20px; /* Added padding for better spacing */
+    box-sizing: border-box;
+    color: white;
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: flex-start; /* Aligns text to the top of the box */
+    justify-content: center;
+    text-align: center; 
+    
+    white-space: normal;
+    overflow: hidden;
+}
+
+/* Optional: increase line height for better readability */
+.text-box p {
+    
+    text-align: center;
+}
+.text-box h1 {
+    color: rgb(247, 5, 247);
+    text-align: center;
+}
+
+.text-box.left {
+
+    margin-right: 5px;
+    text-align: center;
+}
+
+.text-box.right {
+    margin-left: 5px;
+}
+
+/* Ajuste para que la imagen de fondo se vea completamente */
+.image-area {
+    width: 50%; /* Ajustado para centrarse mejor en el espacio disponible */
+    height: 100%;
+    background: url("fondo pagina.jpeg") no-repeat center center;
+    background-size: cover; /* Asegura que la imagen no se corte */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilo de las estrellas como enlaces */
+.star {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('estrellas.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.star:hover {
+    transform: scale(2.2); /* Agrandado al pasar el mouse */
+}
+
+/* Fuente Disney */
+.title {
+    font-family: 'Waltograph', sans-serif;
+    font-size: 4rem; /* Tamaño grande */
+    background: linear-gradient(to bottom, #0396f8, rgb(3, 74, 180)); /* Degradado de blanco a morado */
+    -webkit-background-clip: text; /* Clipa el fondo al contorno del texto */
+    background-clip: text; /* Compatibilidad adicional */
+    color: transparent; /* Hace el texto transparente para mostrar el degradado */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  
+}
+
+
+
+/* Contenedor DISNEY */
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding-top: 0px;
+    background: transparent;
+    
+}
