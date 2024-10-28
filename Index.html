@@ -19,6 +19,16 @@
 </head>
 
 <body>
+      <!-- imagen izquierda -->
+      <div class="left-image">
+        <img src="flores.png" alt="Imagen izquierda">
+    </div>
+ <!-- Contenedor imagen izquierda -->
+ <div class="right-image">
+    <img src="flores.png" alt="Imagen izquierda">
+</div>
+
+
     <div class="title-container">
         <h1 class="title">Bienvenida a Nuestro Mundo Mágico</h1>
     </div>
@@ -72,14 +82,14 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const imageArea = document.querySelector('.image-area');
-            const starCount = 5; // Número de estrellas a generar
-            const starSize = 50; // Tamaño de las estrellas en píxeles
+            const starCount = 5; // Número estrellas 
+            const starSize = 105; // Tamaño estrellas 
     
-            // Obtener el tamaño del área visible de la imagen
+            // tamaño area visible imagen
             const containerWidth = imageArea.clientWidth;
             const containerHeight = imageArea.clientHeight;
     
-            // Links de ejemplo para cada estrella
+            // Links estrella
             const starLinks = [
                 'collage.html',
                 'collage.html',
@@ -89,21 +99,21 @@
             ];
     
             for (let i = 0; i < starCount; i++) {
-                // Crear un nuevo elemento de estrella como enlace
+                // Crear estrella como enlace
                 const star = document.createElement('a');
                 star.classList.add('star');
-                star.href = starLinks[i % starLinks.length]; // Asigna cada enlace a una estrella
-                star.target = "_blank"; // Abre el enlace en una nueva pestaña
+                star.href = starLinks[i % starLinks.length]; // Asigna enlace a estrella
+                star.target = "_blank"; // Abre enlace en nueva pestaña
     
-                // Generar posiciones aleatorias dentro de los límites seguros del área visible
+                // Generar posiciones aleatorias
                 const randomX = Math.random() * (containerWidth - starSize);
                 const randomY = Math.random() * (containerHeight - starSize);
     
-                // Aplicar las posiciones calculadas
+                // Aplica posiciones calculadas
                 star.style.left = `${randomX}px`;
                 star.style.top = `${randomY}px`;
     
-                // Agregar la estrella al contenedor de fondo
+                // Agregar estrella al contenedor de fondo
                 imageArea.appendChild(star);
             }
         });
