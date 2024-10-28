@@ -1,4 +1,4 @@
-/* Fondo con gradiente en el body */
+/* Fondo  gradiente  */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,7 +19,7 @@ body {
     font-style: normal;
 }
 
-/* Contenedor con bordes gradientes */
+/* Contenedor bordes gradientes */
 .background-image {
     position: relative;
     width: 90%; /* Ajustable */
@@ -30,23 +30,23 @@ body {
     border-image: linear-gradient(to bottom right, #0d85d4, purple) 1;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between; /* Alineación de contenido dentro del contenedor */
+    justify-content: space-between; /* contenido dentro contenedor */
     align-items: center;
     gap: 1rem;
 }
 
-/* Cuadros de texto a los lados de la imagen */
+/* Cuadros texto lados de imagen */
 
 .text-box {
     width: 25%;
     height: 100%;
-    padding: 20px; /* Added padding for better spacing */
+    padding: 20px; 
     box-sizing: border-box;
     color: white;
     font-size: 0.9rem;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
-    align-items: flex-start; /* Aligns text to the top of the box */
+    align-items: flex-start;
     justify-content: center;
     text-align: center; 
     
@@ -54,7 +54,7 @@ body {
     overflow: hidden;
 }
 
-/* Optional: increase line height for better readability */
+
 .text-box p {
     
     text-align: center;
@@ -74,21 +74,21 @@ body {
     margin-left: 5px;
 }
 
-/* Ajuste para que la imagen de fondo se vea completamente */
+/* Ajuste imagen fondo completa */
 .image-area {
-    width: 50%; /* Ajustado para centrarse mejor en el espacio disponible */
+    width: 50%; 
     height: 100%;
     background: url("fondo pagina.jpeg") no-repeat center center;
-    background-size: cover; /* Asegura que la imagen no se corte */
+    background-size: cover; /* imagen no se corta */
     overflow: hidden;
     position: relative;
 }
 
-/* Estilo de las estrellas como enlaces */
+/* Estilo estrellas  */
 .star {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     background: url('estrellas.png') no-repeat center center;
     background-size: contain;
     cursor: pointer;
@@ -96,17 +96,17 @@ body {
 }
 
 .star:hover {
-    transform: scale(2.2); /* Agrandado al pasar el mouse */
+    transform: scale(2.6); /* Agrandado al pasar el mouse */
 }
 
 /* Fuente Disney */
 .title {
     font-family: 'Waltograph', sans-serif;
     font-size: 4rem; /* Tamaño grande */
-    background: linear-gradient(to bottom, #0396f8, rgb(3, 74, 180)); /* Degradado de blanco a morado */
-    -webkit-background-clip: text; /* Clipa el fondo al contorno del texto */
-    background-clip: text; /* Compatibilidad adicional */
-    color: transparent; /* Hace el texto transparente para mostrar el degradado */
+    background: linear-gradient(to bottom, #0396f8, rgb(3, 74, 180)); /* Degradado  */
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
     text-align: center;
     margin: 0;
     padding: 20px;
@@ -128,4 +128,43 @@ body {
     padding-top: 0px;
     background: transparent;
     
+}
+/* Imagen lado izquierdo */
+.left-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 150%; 
+    display: flex;
+    align-items: center; 
+    padding-left: 10px; 
+    z-index: 1; 
+}
+.left-image img {
+    height: 300px;
+    max-height: 150%;
+    width: auto;
+    max-width: 150px; 
+    object-fit: contain; /
+}
+
+/* Imagen lado derecho */
+.right-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 150%; 
+    display: flex;
+    align-items: center; 
+    padding-right: 10px; 
+    z-index: 1; 
+}
+
+.right-image img {
+    height: auto;
+    max-height: 150%;
+    width: auto;
+    max-width: 150px; 
+    object-fit: contain; 
+    transform: scaleX(-1); /* Invierte la imagen para que sea simétrica */
 }
