@@ -22,9 +22,9 @@ body {
 /* Contenedor de fondo con borde gradiente */
 .background-image {
     position: relative;
-    width: 90%; /* Ajustable */
-    max-width: 120vw;
-    height: 80%; /* Ajustable */
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
     background-color: transparent;
     border: 10px solid;
     border-image: linear-gradient(to bottom right, #0d85d4, purple) 1;
@@ -33,23 +33,23 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap; /* Permite que el contenido se adapte en dispositivos pequeños */
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 /* Cuadros de texto a los lados de la imagen central */
 .text-box {
-    width: 25%;
-    height: 100%;
+    flex: 1 1 250px; /* Permite que el cuadro se adapte a distintos tamaños */
+    max-width: 45%;
     padding: 20px;
     box-sizing: border-box;
     color: white;
-    font-size: 0.9rem;
+    font-size: 1rem;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
 }
 
 .text-box p {
@@ -71,11 +71,11 @@ body {
 
 /* Área de imagen central */
 .image-area {
-    width: 50%;
+    flex: 1 1 300px;
+    max-width: 45%;
     height: 100%;
     background: url("fondo pagina.jpeg") no-repeat center center;
     background-size: cover;
-    overflow: hidden;
     position: relative;
 }
 
@@ -91,20 +91,20 @@ body {
 }
 
 .star:hover {
-    transform: scale(2.6); /* Aumenta el tamaño al pasar el mouse */
+    transform: scale(2.6);
 }
 
 /* Título con fuente Disney y gradiente */
 .title {
     font-family: 'Waltograph', sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
     background: linear-gradient(to bottom, #0396f8, rgb(3, 74, 180));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-align: center;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Contenedor del título */
@@ -117,92 +117,37 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    padding-top: 0;
     background: transparent;
-}
-
-/* Imagen decorativa en el lado izquierdo */
-.left-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 150%;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    z-index: 1;
-}
-
-.left-image img {
-    max-height: 150%;
-    max-width: 150px;
-    object-fit: contain;
-}
-
-/* Imagen decorativa en el lado derecho */
-.right-image {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 150%;
-    display: flex;
-    align-items: center;
-    padding-right: 10px;
-    z-index: 1;
-}
-
-.right-image img {
-    max-height: 150%;
-    max-width: 150px;
-    object-fit: contain;
-    transform: scaleX(-1); /* Invierte la imagen para simetría */
+    padding: 10px;
 }
 
 /* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
-    /* Ajuste del contenedor de fondo */
     .background-image {
-        width: 100%;
-        height: auto;
-        border-width: 5px;
-        flex-direction: column; /* Apila los elementos verticalmente */
-    }
-
-    /* Cuadros de texto a los lados */
-    .text-box {
-        width: 90%; /* Ocupar la mayor parte del ancho en dispositivos móviles */
-        margin: 10px 0;
-        font-size: 0.8rem; /* Reducir el tamaño de fuente */
-    }
-
-    /* Área de imagen central */
-    .image-area {
-        width: 100%;
-        height: 200px; /* Ajustar la altura para móviles */
-        margin-top: 20px;
-    }
-
-    /* Título en móvil */
-    .title {
-        font-size: 2.5rem; /* Reducir tamaño de título */
+        flex-direction: column;
         padding: 10px;
     }
 
-    /* Contenedor del título */
+    .text-box {
+        max-width: 100%;
+        font-size: 0.8rem;
+        margin: 10px 0;
+    }
+
+    .image-area {
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .title {
+        font-size: 2rem;
+        padding: 5px;
+    }
+
     .title-container {
         top: 10px;
         left: 0;
-        transform: none; /* Eliminar transformación para mejor alineación en móvil */
-        padding: 10px;
-    }
-
-    /* Imágenes decorativas a los lados */
-    .left-image, .right-image {
-        height: 100px;
-    }
-
-    .left-image img, .right-image img {
-        max-width: 80px;
-        max-height: 100px;
+        transform: none;
+        padding: 5px;
     }
 }
