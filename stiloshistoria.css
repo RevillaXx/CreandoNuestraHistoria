@@ -141,7 +141,7 @@ body {
     z-index: 1; 
 }
 .left-image img {
-    height: 300px;
+    height: auto;
     max-height: 150%;
     width: auto;
     max-width: 150px; 
