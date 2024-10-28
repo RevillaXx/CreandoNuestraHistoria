@@ -33,6 +33,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap; /* Permite que el contenido se adapte en dispositivos pequeños */
 }
 
 /* Cuadros de texto a los lados de la imagen central */
@@ -155,4 +156,53 @@ body {
     max-width: 150px;
     object-fit: contain;
     transform: scaleX(-1); /* Invierte la imagen para simetría */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ajuste del contenedor de fondo */
+    .background-image {
+        width: 100%;
+        height: auto;
+        border-width: 5px;
+        flex-direction: column; /* Apila los elementos verticalmente */
+    }
+
+    /* Cuadros de texto a los lados */
+    .text-box {
+        width: 90%; /* Ocupar la mayor parte del ancho en dispositivos móviles */
+        margin: 10px 0;
+        font-size: 0.8rem; /* Reducir el tamaño de fuente */
+    }
+
+    /* Área de imagen central */
+    .image-area {
+        width: 100%;
+        height: 200px; /* Ajustar la altura para móviles */
+        margin-top: 20px;
+    }
+
+    /* Título en móvil */
+    .title {
+        font-size: 2.5rem; /* Reducir tamaño de título */
+        padding: 10px;
+    }
+
+    /* Contenedor del título */
+    .title-container {
+        top: 10px;
+        left: 0;
+        transform: none; /* Eliminar transformación para mejor alineación en móvil */
+        padding: 10px;
+    }
+
+    /* Imágenes decorativas a los lados */
+    .left-image, .right-image {
+        height: 100px;
+    }
+
+    .left-image img, .right-image img {
+        max-width: 80px;
+        max-height: 100px;
+    }
 }
