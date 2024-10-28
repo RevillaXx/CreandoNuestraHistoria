@@ -1,4 +1,4 @@
-/* Fondo  gradiente  */
+/* Fondo gradiente */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,7 +19,7 @@ body {
     font-style: normal;
 }
 
-/* Contenedor bordes gradientes */
+/* Contenedor de fondo con borde gradiente */
 .background-image {
     position: relative;
     width: 90%; /* Ajustable */
@@ -30,17 +30,16 @@ body {
     border-image: linear-gradient(to bottom right, #0d85d4, purple) 1;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between; /* contenido dentro contenedor */
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
 
-/* Cuadros texto lados de imagen */
-
+/* Cuadros de texto a los lados de la imagen central */
 .text-box {
     width: 25%;
     height: 100%;
-    padding: 20px; 
+    padding: 20px;
     box-sizing: border-box;
     color: white;
     font-size: 0.9rem;
@@ -48,43 +47,38 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    text-align: center; 
-    
-    white-space: normal;
+    text-align: center;
     overflow: hidden;
 }
 
-
 .text-box p {
-    
     text-align: center;
 }
+
 .text-box h1 {
     color: rgb(247, 5, 247);
     text-align: center;
 }
 
 .text-box.left {
-
     margin-right: 5px;
-    text-align: center;
 }
 
 .text-box.right {
     margin-left: 5px;
 }
 
-/* Ajuste imagen fondo completa */
+/* Área de imagen central */
 .image-area {
-    width: 50%; 
+    width: 50%;
     height: 100%;
     background: url("fondo pagina.jpeg") no-repeat center center;
-    background-size: cover; /* imagen no se corta */
+    background-size: cover;
     overflow: hidden;
     position: relative;
 }
 
-/* Estilo estrellas  */
+/* Estilo para las estrellas interactivas */
 .star {
     position: absolute;
     width: 100px;
@@ -96,75 +90,69 @@ body {
 }
 
 .star:hover {
-    transform: scale(2.6); /* Agrandado al pasar el mouse */
+    transform: scale(2.6); /* Aumenta el tamaño al pasar el mouse */
 }
 
-/* Fuente Disney */
+/* Título con fuente Disney y gradiente */
 .title {
     font-family: 'Waltograph', sans-serif;
-    font-size: 4rem; /* Tamaño grande */
-    background: linear-gradient(to bottom, #0396f8, rgb(3, 74, 180)); /* Degradado  */
-    -webkit-background-clip: text; 
-    background-clip: text; 
-    color: transparent; 
+    font-size: 4rem;
+    background: linear-gradient(to bottom, #0396f8, rgb(3, 74, 180));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     text-align: center;
     margin: 0;
     padding: 20px;
-  
 }
 
-
-
-/* Contenedor DISNEY */
+/* Contenedor del título */
 .title-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    padding-top: 0px;
+    padding-top: 0;
     background: transparent;
-    
 }
-/* Imagen lado izquierdo */
+
+/* Imagen decorativa en el lado izquierdo */
 .left-image {
     position: absolute;
     left: 0;
     top: 0;
-    height: 150%; 
+    height: 150%;
     display: flex;
-    align-items: center; 
-    padding-left: 10px; 
-    z-index: 1; 
-}
-.left-image img {
-    height: auto;
-    max-height: 150%;
-    width: auto;
-    max-width: 150px; 
-    object-fit: contain; /
+    align-items: center;
+    padding-left: 10px;
+    z-index: 1;
 }
 
-/* Imagen lado derecho */
+.left-image img {
+    max-height: 150%;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+/* Imagen decorativa en el lado derecho */
 .right-image {
     position: absolute;
     right: 0;
     top: 0;
-    height: 150%; 
+    height: 150%;
     display: flex;
-    align-items: center; 
-    padding-right: 10px; 
-    z-index: 1; 
+    align-items: center;
+    padding-right: 10px;
+    z-index: 1;
 }
 
 .right-image img {
-    height: auto;
     max-height: 150%;
-    width: auto;
-    max-width: 150px; 
-    object-fit: contain; 
-    transform: scaleX(-1); /* Invierte la imagen para que sea simétrica */
+    max-width: 150px;
+    object-fit: contain;
+    transform: scaleX(-1); /* Invierte la imagen para simetría */
 }
