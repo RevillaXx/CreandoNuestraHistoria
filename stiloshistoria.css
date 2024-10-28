@@ -19,37 +19,37 @@ body {
     font-style: normal;
 }
 
-/* Contenedor de fondo con borde gradiente */
+/* Contenedor con bordes gradientes */
 .background-image {
     position: relative;
-    width: 90%;
+    width: 90%; /* Ajustable */
     max-width: 1200px;
-    height: auto;
+    height: 80%; /* Ajustable */
     background-color: transparent;
     border: 10px solid;
     border-image: linear-gradient(to bottom right, #0d85d4, purple) 1;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* contenido dentro contenedor */
     align-items: center;
     gap: 1rem;
-    padding: 20px;
-    flex-wrap: wrap;
 }
 
-/* Cuadros de texto a los lados de la imagen central */
+/* Cuadros de texto a los lados */
 .text-box {
-    flex: 1 1 250px; /* Permite que el cuadro se adapte a distintos tamaños */
-    max-width: 45%;
-    padding: 20px;
+    width: 25%;
+    height: 100%;
+    padding: 20px; 
     box-sizing: border-box;
     color: white;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
+    white-space: normal;
+    overflow: hidden;
 }
 
 .text-box p {
@@ -63,23 +63,24 @@ body {
 
 .text-box.left {
     margin-right: 5px;
+    text-align: center;
 }
 
 .text-box.right {
     margin-left: 5px;
 }
 
-/* Área de imagen central */
+/* Imagen de fondo completa */
 .image-area {
-    flex: 1 1 300px;
-    max-width: 45%;
+    width: 50%; 
     height: 100%;
     background: url("fondo pagina.jpeg") no-repeat center center;
     background-size: cover;
+    overflow: hidden;
     position: relative;
 }
 
-/* Estilo para las estrellas interactivas */
+/* Estilo para las estrellas */
 .star {
     position: absolute;
     width: 100px;
@@ -94,60 +95,105 @@ body {
     transform: scale(2.6);
 }
 
-/* Título con fuente Disney y gradiente */
+/* Fuente Disney */
 .title {
     font-family: 'Waltograph', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     background: linear-gradient(to bottom, #0396f8, rgb(3, 74, 180));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-align: center;
     margin: 0;
-    padding: 10px;
+    padding: 20px;
 }
 
-/* Contenedor del título */
+/* Contenedor del título Disney */
 .title-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    padding-top: 0px;
     background: transparent;
-    padding: 10px;
 }
 
-/* Ajustes para dispositivos móviles */
+/* Imagen lado izquierdo */
+.left-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 150%; 
+    display: flex;
+    align-items: center; 
+    padding-left: 10px; 
+    z-index: 1;
+}
+
+.left-image img {
+    height: auto;
+    max-height: 150%;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+/* Imagen lado derecho */
+.right-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 150%; 
+    display: flex;
+    align-items: center; 
+    padding-right: 10px; 
+    z-index: 1;
+}
+
+.right-image img {
+    height: auto;
+    max-height: 150%;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    transform: scaleX(-1);
+}
+
+/* Media Queries para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     .background-image {
         flex-direction: column;
-        padding: 10px;
+        width: 100%;
+        height: auto;
+        align-items: center;
     }
 
     .text-box {
-        max-width: 100%;
+        width: 90%;
+        height: auto;
         font-size: 0.8rem;
         margin: 10px 0;
     }
 
     .image-area {
-        max-width: 100%;
-        height: 200px;
+        width: 90%;
+        height: 300px;
     }
 
     .title {
-        font-size: 2rem;
-        padding: 5px;
+        font-size: 2.5rem;
     }
 
     .title-container {
+        padding: 10px 0;
         top: 10px;
-        left: 0;
-        transform: none;
-        padding: 5px;
+    }
+
+    .left-image, .right-image {
+        display: none; /* Oculta las imágenes laterales en móvil */
     }
 }
